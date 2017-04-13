@@ -2,7 +2,7 @@
   "name": "donowlib/util",
   "autoload": {
     "psr-0": {
-      "sampleutil": "."
+      "libutil\": "src/"
     }
   }
 }

@@ -1,8 +1,8 @@
 <?php
-namespace sampleutil;
+namespace libutil;
 
 
-class sampleutil{
+class sample{
 
 
     private $message;
