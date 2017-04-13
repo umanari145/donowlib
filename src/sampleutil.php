@@ -1,8 +1,8 @@
 <?php
-namespace SampleUtil;
+namespace sampleutil;
 
 
-class SampleUtil{
+class sampleutil{
 
 
     private $message;
