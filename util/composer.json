@@ -1,0 +1,8 @@
+{
+  "name": "sampleUtil",
+  "autoload": {
+    "psr-0": {
+      "SampleUtil": "src"
+    }
+  }
+}
