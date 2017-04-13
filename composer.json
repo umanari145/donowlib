@@ -1,0 +1,8 @@
+{
+  "name": "donowlib/util",
+  "autoload": {
+    "psr-0": {
+      "sampleutil": "src/"
+    }
+  }
+}
