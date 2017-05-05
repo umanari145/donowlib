@@ -6,6 +6,9 @@
       "cakephp/cakephp-codesniffer":"2.*",
       "phpunit/phpunit": "*"
   },
+  "scripts": {
+      "test": "phpunit"
+  },
   "autoload": {
     "psr-0": {
       "libutil\\": "src/",
