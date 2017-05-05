@@ -1,8 +1,15 @@
 {
   "name": "donowlib/util",
+  "require":{
+      "phpmd/phpmd":"*",
+      "squizlabs/php_codesniffer": "2.*",
+      "cakephp/cakephp-codesniffer":"2.*",
+      "phpunit/phpunit": "*"
+  },
   "autoload": {
     "psr-0": {
-      "libutil\\": "src/"
+      "libutil\\": "src/",
+      "libutil\\Tests\\": "tests/"
     }
   }
 }
