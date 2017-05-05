@@ -3,7 +3,7 @@
 
     <target name="phpunit">
         <phpunit>
-          <formatter todir="reports" type="plain" usefile="false" />
+          <formatter type="plain" usefile="false" />
           <batchtest>
             <fileset dir="./tests">
             </fileset>
@@ -11,5 +11,26 @@
         </phpunit>
     </target>
     
-    <target name="build" depends="phpunit" />
+    <target name="phpmd">
+        <phpmd rulesets="cleancode,codesize,controversial,design,naming,unusedcode">
+          <formatter type="text" usefile="false" />
+              <fileset dir="./">
+                <include name="src/" />
+                <include name="tests/" />
+	      </fileset>
+        </phpmd>
+    </target>
+
+
+    <target name="phpcodesniffer" >
+        <phpcodesniffer standard="PSR1" >
+              <fileset dir="./">
+                <include name="src/" />
+                <include name="tests/" />
+	      </fileset>
+    	  <formatter type="full" usefile="false"/>
+        </phpcodesniffer>
+    </target>
+
+    <target name="build" depends="phpunit,phpmd,phpcodesniffer" />
 </project>
