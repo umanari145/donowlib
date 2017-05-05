@@ -1,15 +1,15 @@
-<?XML VERSION="1.0" ENCODING="utf-8"?>
-<PROJECT NAME="samplePro" DEFAULT="build">
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="samplePro" default="build">
 
-<target name="phpunit">
-<phpunit>
-  <formatter todir="reports" type="xml"/>
-  <batchtest>
-    <fileset dir="./tests">
-    </fileset>
-  </batchtest>
-</phpunit>
-</target>
-
-<TARGET NAME="BUILD" DEPENDS="PHPUNIT" />
-</PROJECT>
+    <target name="phpunit">
+        <phpunit>
+          <formatter todir="reports" type="xml"/>
+          <batchtest>
+            <fileset dir="./tests">
+            </fileset>
+          </batchtest>
+        </phpunit>
+    </target>
+    
+    <target name="build" depends="phpunit" />
+</project>
