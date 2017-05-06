@@ -20,7 +20,7 @@ class ArrayUtil
         for ($i = 0; $i < $arrayLength; $i ++) {
             $eachHash;
             foreach ($hashKeys as $hashKey) {
-                $eachHash[$hashKey] = $params[$hashKey][$i];
+                $eachHash[$hashKey] = (isset($params[$hashKey][$i])) ? $params[$hashKey][$i] : "";
             }
             $hashList[] = $eachHash;
         }
