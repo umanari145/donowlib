@@ -32,5 +32,14 @@
         </phpcodesniffer>
     </target>
 
-    <target name="build" depends="phpunit,phpmd,phpcodesniffer" />
+    <target name="phpdocument" description="Generate document" >
+        <phpdoc2 title="API Documentation" destdir="./docs" template="responsive-twig">
+	     <fileset dir="./">
+                <include name="src/" />
+                <include name="tests/" />
+	     </fileset>
+	</phpdoc2>
+    </target>
+
+    <target name="build" depends="phpunit,phpmd,phpcodesniffer,phpdocument" />
 </project>
