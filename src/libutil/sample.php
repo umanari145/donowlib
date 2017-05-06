@@ -1,13 +1,19 @@
 <?php
-
 namespace libutil;
 
-class util {
+class util
+{
+
     private $message;
-    public function __construct($message = '') {
+
+    public function __construct($message = '')
+    {
         $this->message = $message;
     }
-    public function showMessage() {
+
+    public function showMessage()
+    {
         echo $this->message;
     }
+
 }
