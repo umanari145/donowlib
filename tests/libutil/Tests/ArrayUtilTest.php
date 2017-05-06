@@ -51,6 +51,24 @@ class ArrayUtilTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $arr2);
     }
 
+    public function testgroupByMultiKey()
+    {
+        $arr = [
+            ['class' => 'A', 'type'=>'2' , 'pref' => 'chiba'],
+            ['class' => 'A', 'type'=>'3' , 'pref' => 'tokyo'],
+            ['class' => 'A', 'type'=>'2' , 'pref' => 'chiba'],
+            ['class' => 'B', 'type'=>'1' , 'pref' => 'tokyo'],
+        ];
 
+        $expected = [
+           'A_2' => [['class' => 'A', 'type'=>'2' , 'pref' => 'chiba'],
+                     ['class' => 'A', 'type'=>'2' , 'pref' => 'chiba']],
+           'A_3' => [['class' => 'A', 'type'=>'3' , 'pref' => 'tokyo']],
+           'B_1' => [['class' => 'B', 'type'=>'1' , 'pref' => 'tokyo']]
+        ];
+
+        $arr2 = ArrayUtil::groupByMultiKey($arr, $keyArr =['class','type']);
+        $this->assertEquals($expected, $arr2);
+    }
 
 }
