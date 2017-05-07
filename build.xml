@@ -23,7 +23,7 @@
 
 
     <target name="phpcodesniffer" >
-        <phpcodesniffer standard="PSR1" >
+        <phpcodesniffer standard="PSR2" >
               <fileset dir="./">
                 <include name="src/" />
                 <include name="tests/" />
