@@ -10,15 +10,9 @@ class ArrayUtilTest extends \PHPUnit_Framework_TestCase
     public function testGetFormParamtoHash()
     {
         $arr = [
-            'name' => [
-                'tarou','jirou','saburou',''
-            ],
-            'age' =>[
-                '20','33','23',
-            ],
-            'pref' =>[
-                'chiba','tokyo','kanagawa'
-            ]
+            'name' => ['tarou','jirou','saburou',''],
+            'age' =>['20','33','23',],
+            'pref' =>['chiba','tokyo','kanagawa']
         ];
 
         $expected = [
