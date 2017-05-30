@@ -1,3 +1,4 @@
  /vendor/*
  /docs/*
  /reports/*
+ src/libutil/config.php

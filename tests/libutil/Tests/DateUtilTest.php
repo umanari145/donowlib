@@ -21,5 +21,4 @@ class DateUtilTest extends \PHPUnit_Framework_TestCase
 
     }
 
-
 }
