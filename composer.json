@@ -8,7 +8,10 @@
       "phing/phing": "2.*",
       "guzzlehttp/guzzle": "~6.0",
       "emonkak/underbar.php": "dev-master",
-      "cakephp/cakephp": "3.4.*"
+      "slim/slim": "2.4",
+      "j4mie/idiorm": "1.4.*",
+      "nesbot/carbon": "~1.18",
+      "cakephp/cakephp": "3.3.*"
   },
   "scripts": {
       "test": "phpunit"
