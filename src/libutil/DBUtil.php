@@ -73,10 +73,15 @@ class DBUtil
             \ORM::configure('username', $this->dbUser);
             \ORM::configure('password', $this->dbPass);
             \ORM::configure('driver_options', array( \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+            \ORM::configure('return_result_sets', true);
+
+            //static変数効果を見たいので一時的に外す(通常時はtrue)
+            //\ORM::configure('caching', true);
+            \ORM::configure('caching_auto_clear', true);
 
             \ORM::configure('logging', true);
             \ORM::configure('logger', function ($log_string) {
-                echo $log_string;
+                echo $log_string . "\n";
             });
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -85,10 +90,17 @@ class DBUtil
     }
 
 
-    public function select($table )
+    public function select($table, $whereArr = [])
     {
         $this->connect();
         $data = \ORM::for_table($table)->find_array();
         return $data;
+    }
+
+    public function get($table, $id)
+    {
+        $this->connect();
+        $data = \ORM::for_table($table)->where('id', $id)->find_array();
+        return ( !empty($data)) ? $data[0] : [];
     }
 }
