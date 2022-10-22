@@ -3,10 +3,9 @@
 namespace libutil\Tests;
 
 use libutil\DBUtil;
-
-class DBUtilTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+class DBUtilTest extends TestCase
 {
-
 
     public function testSelect()
     {

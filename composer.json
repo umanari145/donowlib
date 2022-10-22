@@ -1,17 +1,10 @@
 {
   "name": "donowlib/util",
   "require":{
-      "phpmd/phpmd":"*",
-      "squizlabs/php_codesniffer": "2.*",
-      "phpunit/phpunit": "*",
-      "phpdocumentor/phpdocumentor": "2.*",
-      "phing/phing": "2.*",
-      "guzzlehttp/guzzle": "~6.0",
-      "emonkak/underbar.php": "dev-master",
-      "slim/slim": "2.4",
-      "j4mie/idiorm": "1.4.*",
-      "nesbot/carbon": "~1.18",
-      "cakephp/cakephp": "3.3.*"
+    "guzzlehttp/guzzle": "^7.5",
+    "j4mie/idiorm": "^1.5",
+    "emonkak/underbar.php": "^0.3.0",
+    "phpunit/phpunit": "^9.5"
   },
   "scripts": {
       "test": "phpunit"

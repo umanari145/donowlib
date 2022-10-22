@@ -3,7 +3,6 @@ namespace libutil;
 
 class ArrayUtil
 {
-
     /**
      * 配列の縦横変換(主に明細行をハッシュ化する処理)
      *
@@ -17,7 +16,7 @@ class ArrayUtil
         $arrayLength = count($params[$name]);
 
         $hashList;
-        for ($i = 0; $i < $arrayLength; $i ++) {
+        for ($i = 0; $i < $arrayLength; $i++) {
             $eachHash;
             foreach ($hashKeys as $hashKey) {
                 $eachHash[$hashKey] = (isset($params[$hashKey][$i])) ? $params[$hashKey][$i] : "";
@@ -41,9 +40,9 @@ class ArrayUtil
         $eachRowLength = count($arr[0]);
         // まず全内部配列を縦に値をとり１つずつずらしていく
         $totalArr = [];
-        for ($i = 0; $i < $eachRowLength; $i ++) {
+        for ($i = 0; $i < $eachRowLength; $i++) {
             $newArr = [];
-            for ($j = 0; $j < $insightRowCount; $j ++) {
+            for ($j = 0; $j < $insightRowCount; $j++) {
                 $ele = (isset($arr[$j][$i]) === true) ? $arr[$j][$i] : "";
                 $newArr[] = $ele;
             }
